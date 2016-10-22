@@ -1,0 +1,5 @@
+rootProject.name = 'classifier-service'
+
+include 'classifier-service-app'
+include 'classifier-service-server'
+include 'classifier-service-distribution'
