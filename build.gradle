@@ -47,11 +47,6 @@ allprojects {
 }
 
 // ====
-// Node
-// ====
-apply from: "$rootDir/gradle/node.gradle"
-
-// ====
 // IDEA
 // ====
 apply from: "$rootDir/gradle/idea.gradle"

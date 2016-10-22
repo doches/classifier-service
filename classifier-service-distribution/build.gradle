@@ -16,10 +16,6 @@ dependencies {
     runtime project(':classifier-service-server')
 }
 
-tasks.getByName("distZip") {
-    dependsOn ":classifier-service-app:gulp_publish"
-}
-
 distributions {
     main {
         contents {
@@ -29,11 +25,6 @@ distributions {
                     exclude '**/*.log'
                     exclude 'data/**/*'
                     includeEmptyDirs true
-                }
-            }
-            into ('web') {
-                from("$projectDir/../classifier-service-app/build/min") {
-                    include "**/*"
                 }
             }
         }
