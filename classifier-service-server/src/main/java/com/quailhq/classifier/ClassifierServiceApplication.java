@@ -21,6 +21,6 @@ public final class ClassifierServiceApplication extends Application<ClassifierSe
 
     @Override
     public void run(final ClassifierServiceConfiguration configuration, final Environment environment) {
-        environment.jersey().register(new ClassifierResource(configuration.getModelPath()));
+        environment.jersey().register(new ClassifierResource(configuration.getModelPath(), configuration.getMemory()));
     }
 }

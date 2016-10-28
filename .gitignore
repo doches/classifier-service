@@ -33,3 +33,5 @@ npm-debug.log
 
 ### Vim ###
 *.sw[op]
+classifier-service-distribution/src/standard/model.ser
+build/

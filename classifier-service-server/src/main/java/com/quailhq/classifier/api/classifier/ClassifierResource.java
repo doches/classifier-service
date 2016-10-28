@@ -18,7 +18,7 @@ public class ClassifierResource {
     private BayesClassifier<String, String> bayes;
     private String modelPath;
 
-    public ClassifierResource(String modelPath) {
+    public ClassifierResource(String modelPath, int capacity) {
         this.modelPath = modelPath;
 
         File existingModel = new File(modelPath);
@@ -36,6 +36,8 @@ public class ClassifierResource {
         if (bayes == null) {
             bayes = new BayesClassifier<String, String>();
         }
+
+        bayes.setMemoryCapacity(capacity);
     }
 
     @Path("/learn")
