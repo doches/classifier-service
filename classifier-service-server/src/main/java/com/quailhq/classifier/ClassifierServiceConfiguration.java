@@ -17,4 +17,10 @@ public final class ClassifierServiceConfiguration extends Configuration {
     public String getModelPath() {
         return modelPath;
     }
+
+    @JsonProperty("memory")
+    protected Integer memory;
+    public Integer getMemory() {
+        return memory;
+    }
 }

@@ -1,7 +1,11 @@
 # Dropwizard Configuration File
 # See for details: https://dropwizard.github.io/dropwizard/manual/configuration.html
 
-modelPath: ./model.ser
+# Path to save/load model
+modelPath: "./model.ser"
+
+# Number of items to keep in memory. Items older than this fade from the model.
+memory: 10000
 
 # =============================================
 #                Server Settings
